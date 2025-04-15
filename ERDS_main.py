@@ -75,15 +75,16 @@ X_train_prawa = X_train[y_train == 1]
 C = ERDS_CSP.CSP(256, 19)
 C.fit(X_train_lewa, X_train_prawa)
 C.componentsHeadImg()
-S = C.transform(X_test)
+S_train = C.transform(X_train)
+S_test = C.transform(X_test)
 
 print("Wybierz właściwy komponent na podstawie rysunków (powinien zawierać aktywność na P3-P4): ", end="")
 numKomponent = int(input())
 
-SpektogramyRuchTrain, f_tab, t_tab = ERDS_utils.przygotuj_spektrogramy_do_testu(X_train, numKomponent, fs=256, nperseg=128, noverlap=64)
+SpektogramyRuchTrain, f_tab, t_tab = ERDS_utils.przygotuj_spektrogramy(S_train, numKomponent, fs=256, nperseg=128, noverlap=64)
 print(SpektogramyRuchTrain.shape)
 
-SpektogramyRuchTest, f_tab, t_tab = ERDS_utils.przygotuj_spektrogramy_do_testu(X_test, numKomponent, fs=256, nperseg=128, noverlap=64)
+SpektogramyRuchTest, f_tab, t_tab = ERDS_utils.przygotuj_spektrogramy(S_test, numKomponent, fs=256, nperseg=128, noverlap=64)
 print(SpektogramyRuchTest.shape)
 
 # SpłaszczoneSpektogramy

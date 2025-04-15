@@ -138,7 +138,7 @@ def normowane_sigm_baseline(Spektogram):
     return tab
 
 
-def przygotuj_spektrogramy_do_testu(daneTestowe, numKomponent, fs=256, nperseg=128, noverlap=64):
+def przygotuj_spektrogramy(daneTestowe, numKomponent, fs=256, nperseg=128, noverlap=64):
     """
     zwraca zestaw spektogramów
 
