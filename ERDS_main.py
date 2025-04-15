@@ -67,7 +67,7 @@ ERDS_utils.rysunek_glowy(usr_SWP_norm, t, f, "Uśredniony Spektogram WyobPrawa n
 # ERDS_utils.rysunek_glowy(SWP_norm_sigm, t, f, "Uśredniony Spektrogram WyobPrawa normowany sigma", sigma=3)
 
 
-X_train, X_test, y_train, y_test = ERDS_training.podziel_dane_do_uczenia(daneRuchLewa, daneRuchPrawa)
+X_train, X_test, y_train, y_test = ERDS_training.podziel_dane_do_uczenia(daneWyobLewa, daneWyobPrawa)
 X_train_lewa = X_train[y_train == 0]
 X_train_prawa = X_train[y_train == 1]
 
@@ -78,18 +78,35 @@ C.componentsHeadImg()
 S_train = C.transform(X_train)
 S_test = C.transform(X_test)
 
-print("Wybierz właściwy komponent na podstawie rysunków (powinien zawierać aktywność na P3-P4): ", end="")
-numKomponent = int(input())
+print("Wybierz właściwy pierwszy komponent na podstawie rysunków (powinien zawierać aktywność na P3-P4): ", end="")
+numKomponent1 = int(input())
 
-SpektogramyRuchTrain, f_tab, t_tab = ERDS_utils.przygotuj_spektrogramy(S_train, numKomponent, fs=256, nperseg=128, noverlap=64)
-print(SpektogramyRuchTrain.shape)
+SpektogramyRuchTrain1, f_tab, t_tab = ERDS_utils.przygotuj_spektrogramy(S_train, numKomponent1, fs=256, nperseg=128, noverlap=64)
+SpektogramyRuchTest1, f_tab, t_tab = ERDS_utils.przygotuj_spektrogramy(S_test, numKomponent1, fs=256, nperseg=128, noverlap=64)
+print(SpektogramyRuchTrain1.shape)
+print(SpektogramyRuchTest1.shape)
 
-SpektogramyRuchTest, f_tab, t_tab = ERDS_utils.przygotuj_spektrogramy(S_test, numKomponent, fs=256, nperseg=128, noverlap=64)
-print(SpektogramyRuchTest.shape)
+print("Wybierz właściwy drugi komponent na podstawie rysunków: ", end="")
+numKomponent2 = int(input())
+
+SpektogramyRuchTrain2, f_tab, t_tab = ERDS_utils.przygotuj_spektrogramy(S_train, numKomponent2, fs=256, nperseg=128, noverlap=64)
+SpektogramyRuchTest2, f_tab, t_tab = ERDS_utils.przygotuj_spektrogramy(S_test, numKomponent2, fs=256, nperseg=128, noverlap=64)
+print(SpektogramyRuchTrain2.shape)
+print(SpektogramyRuchTest2.shape)
 
 # SpłaszczoneSpektogramy
-SSRTrain = SpektogramyRuchTrain.reshape(SpektogramyRuchTrain.shape[0], -1)
-SSRTest = SpektogramyRuchTest.reshape(SpektogramyRuchTest.shape[0], -1)
+SSRTrain1 = SpektogramyRuchTrain1.reshape(SpektogramyRuchTrain1.shape[0], -1)
+SSRTest1 = SpektogramyRuchTest1.reshape(SpektogramyRuchTest1.shape[0], -1)
+SSRTrain2 = SpektogramyRuchTrain1.reshape(SpektogramyRuchTrain2.shape[0], -1)
+SSRTest2 = SpektogramyRuchTest1.reshape(SpektogramyRuchTest2.shape[0], -1)
+print("Test shape: ", SSRTrain1.shape, SSRTrain2.shape)
+print("Train shape: ", SSRTest1.shape, SSRTest2.shape)
+
+SSRTrain = np.concatenate([SSRTrain1, SSRTrain2], axis=1)
+SSRTest = np.concatenate([SSRTest1, SSRTest2], axis=1)
+print(SSRTrain.shape)
+print(SSRTest.shape)
+
 
 print("\n===================\nRegresja Logistyczna\n===================")
 modelRL = ERDS_training.treningRegresjaLogistyczna(SSRTrain, y_train)
