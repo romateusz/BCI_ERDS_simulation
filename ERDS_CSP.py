@@ -77,7 +77,7 @@ class CSP:
 
         # topologia
         W_odwrotna = np.linalg.inv(self.W)
-        for numKomponent in [16,17,18]:
+        for numKomponent in [0,1,17,18]:
             print(f"\n===================\nKomponent: {numKomponent}\n===================")
             wybranyKomponent = W_odwrotna[numKomponent,:]
             print(wybranyKomponent.shape)

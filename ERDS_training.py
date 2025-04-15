@@ -76,6 +76,7 @@ def treningXGBOOST(X_train, y_train):
     
     # Accuracy
     train_accuracy_xgb = accuracy_score(y_train, y_train_pred_xgb)
+    print(train_accuracy_xgb)
     return best_model
 
 def testTESTXGBOOST(best_model, X_test, y_test):
