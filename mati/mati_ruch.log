@@ -1,0 +1,736 @@
+1.6253 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['pygame', 'sounddevice', 'PTB', 'pyo'] (in that order).
+2.1620 	WARNING 	Import Error: No module named 'psychtoolbox'. Using event module for keyboard component.
+4.6196 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1080]. Using actual size
+5.8534 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7ffb09889908>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7ffb09b5e390>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+5.8535 	EXP 	window1: recordFrameIntervals = False
+6.0183 	EXP 	window1: recordFrameIntervals = True
+6.0900 	WARNING 	t of last frame was 22.18ms (=1/45)
+6.1397 	WARNING 	t of last frame was 21.94ms (=1/45)
+6.1724 	WARNING 	t of last frame was 21.04ms (=1/47)
+6.2881 	WARNING 	t of last frame was 20.20ms (=1/49)
+6.3390 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+7.6855 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+7.7503 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='za chwilę się zacznie kliknij spację', units='height', win=Window(...), wrapWidth=1)
+7.7529 	EXP 	Created fiksa = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=0.0, fillColor=array([127., 127., 127.]), fillColorSpace='rgb', interpolate=True, lineColor=array([127., 127., 127.]), lineColorSpace='rgb', lineWidth=0.5, name='fiksa', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([4., 4.]), units='cm', vertices=ndarray(...), win=Window(...), windingRule=None)
+7.7541 	EXP 	Created strza = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=0.0, fillColor=array([127., 127., 127.]), fillColorSpace='rgb', interpolate=True, lineColor=array([127., 127., 127.]), lineColorSpace='rgb', lineWidth=0.5, name='strza', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([4., 4.]), units='cm', vertices=ndarray(...), win=Window(...), windingRule=None)
+7.7552 	EXP 	Created polygon_3 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-1.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=1, name='polygon_3', opacity=1.0, ori=array(90.), pos=array([2.2, 0. ]), size=array([1., 1.]), units='cm', vertices=ndarray(...), win=Window(...), windingRule=None)
+7.7562 	EXP 	Created polygon_4 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-2.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineWidth=1, name='polygon_4', opacity=1.0, ori=array(270.), pos=array([-2.2,  0. ]), size=array([1., 1.]), units='cm', vertices=ndarray(...), win=Window(...), windingRule=None)
+7.7618 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_3', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Dziękujemy za udział w badaniu.', units='height', win=Window(...), wrapWidth=1)
+7.7673 	EXP 	text: autoDraw = True
+17.7081 	DATA 	Keypress: space
+17.7092 	EXP 	Created sequence: random, trialTypes=1, nReps=60, seed=None
+17.7098 	EXP 	New trial (rep=0, index=0): None
+17.7225 	EXP 	text: autoDraw = False
+17.7225 	EXP 	fiksa: autoDraw = True
+19.7276 	EXP 	fiksa: autoDraw = False
+19.7276 	EXP 	strza: autoDraw = True
+19.7276 	EXP 	polygon_3: autoDraw = True
+22.7072 	EXP 	polygon_4: autoDraw = True
+25.7081 	EXP 	polygon_3: autoDraw = False
+25.7081 	EXP 	polygon_4: autoDraw = False
+25.7326 	EXP 	New trial (rep=1, index=0): None
+25.7437 	EXP 	strza: autoDraw = False
+25.7437 	EXP 	polygon_3: autoDraw = False
+25.7437 	EXP 	polygon_4: autoDraw = False
+25.7437 	EXP 	fiksa: autoDraw = True
+27.7425 	EXP 	fiksa: autoDraw = False
+27.7425 	EXP 	fiksa: autoDraw = False
+27.7425 	EXP 	strza: autoDraw = True
+27.7425 	EXP 	polygon_3: autoDraw = True
+30.7339 	EXP 	polygon_4: autoDraw = True
+33.7281 	EXP 	polygon_3: autoDraw = False
+33.7281 	EXP 	polygon_4: autoDraw = False
+33.7304 	EXP 	New trial (rep=2, index=0): None
+33.7490 	EXP 	strza: autoDraw = False
+33.7490 	EXP 	strza: autoDraw = False
+33.7490 	EXP 	polygon_3: autoDraw = False
+33.7490 	EXP 	polygon_4: autoDraw = False
+33.7490 	EXP 	fiksa: autoDraw = True
+35.7497 	EXP 	fiksa: autoDraw = False
+35.7497 	EXP 	strza: autoDraw = True
+35.7497 	EXP 	polygon_4: autoDraw = True
+38.7132 	EXP 	polygon_3: autoDraw = True
+41.7320 	EXP 	polygon_3: autoDraw = False
+41.7320 	EXP 	polygon_4: autoDraw = False
+41.7352 	EXP 	New trial (rep=3, index=0): None
+41.7530 	EXP 	strza: autoDraw = False
+41.7530 	EXP 	polygon_3: autoDraw = False
+41.7530 	EXP 	polygon_4: autoDraw = False
+41.7530 	EXP 	fiksa: autoDraw = True
+43.7673 	EXP 	fiksa: autoDraw = False
+43.7673 	EXP 	strza: autoDraw = True
+43.7673 	EXP 	polygon_3: autoDraw = True
+46.7322 	EXP 	polygon_4: autoDraw = True
+49.7338 	EXP 	polygon_3: autoDraw = False
+49.7338 	EXP 	polygon_4: autoDraw = False
+49.7536 	EXP 	New trial (rep=4, index=0): None
+49.7671 	EXP 	strza: autoDraw = False
+49.7671 	EXP 	polygon_3: autoDraw = False
+49.7671 	EXP 	polygon_4: autoDraw = False
+49.7671 	EXP 	fiksa: autoDraw = True
+51.7710 	EXP 	fiksa: autoDraw = False
+51.7710 	EXP 	fiksa: autoDraw = False
+51.7710 	EXP 	strza: autoDraw = True
+51.7710 	EXP 	polygon_4: autoDraw = True
+54.7367 	EXP 	polygon_3: autoDraw = True
+57.7402 	EXP 	polygon_3: autoDraw = False
+57.7402 	EXP 	polygon_4: autoDraw = False
+57.7719 	EXP 	New trial (rep=5, index=0): None
+57.7896 	EXP 	strza: autoDraw = False
+57.7896 	EXP 	polygon_3: autoDraw = False
+57.7896 	EXP 	polygon_4: autoDraw = False
+57.7896 	EXP 	fiksa: autoDraw = True
+59.8051 	EXP 	fiksa: autoDraw = False
+59.8051 	EXP 	strza: autoDraw = True
+59.8051 	EXP 	polygon_4: autoDraw = True
+62.7921 	EXP 	polygon_3: autoDraw = True
+65.7722 	EXP 	polygon_3: autoDraw = False
+65.7722 	EXP 	polygon_4: autoDraw = False
+65.7958 	EXP 	New trial (rep=6, index=0): None
+65.8075 	EXP 	strza: autoDraw = False
+65.8075 	EXP 	polygon_3: autoDraw = False
+65.8075 	EXP 	polygon_4: autoDraw = False
+65.8075 	EXP 	fiksa: autoDraw = True
+67.8079 	EXP 	fiksa: autoDraw = False
+67.8079 	EXP 	fiksa: autoDraw = False
+67.8079 	EXP 	strza: autoDraw = True
+67.8079 	EXP 	polygon_3: autoDraw = True
+70.7742 	EXP 	polygon_4: autoDraw = True
+73.7778 	EXP 	polygon_3: autoDraw = False
+73.7778 	EXP 	polygon_4: autoDraw = False
+73.7941 	EXP 	New trial (rep=7, index=0): None
+73.8133 	EXP 	strza: autoDraw = False
+73.8133 	EXP 	strza: autoDraw = False
+73.8133 	EXP 	polygon_3: autoDraw = False
+73.8133 	EXP 	polygon_4: autoDraw = False
+73.8133 	EXP 	fiksa: autoDraw = True
+75.8282 	EXP 	fiksa: autoDraw = False
+75.8282 	EXP 	strza: autoDraw = True
+75.8282 	EXP 	polygon_3: autoDraw = True
+78.8137 	EXP 	polygon_4: autoDraw = True
+81.7947 	EXP 	polygon_3: autoDraw = False
+81.7947 	EXP 	polygon_4: autoDraw = False
+81.7970 	EXP 	New trial (rep=8, index=0): None
+81.8113 	EXP 	strza: autoDraw = False
+81.8113 	EXP 	polygon_3: autoDraw = False
+81.8113 	EXP 	polygon_4: autoDraw = False
+81.8113 	EXP 	fiksa: autoDraw = True
+83.8180 	EXP 	fiksa: autoDraw = False
+83.8180 	EXP 	fiksa: autoDraw = False
+83.8180 	EXP 	strza: autoDraw = True
+83.8180 	EXP 	polygon_3: autoDraw = True
+86.7843 	EXP 	polygon_4: autoDraw = True
+89.7809 	EXP 	polygon_3: autoDraw = False
+89.7809 	EXP 	polygon_4: autoDraw = False
+89.8036 	EXP 	New trial (rep=9, index=0): None
+89.8141 	EXP 	strza: autoDraw = False
+89.8141 	EXP 	polygon_3: autoDraw = False
+89.8141 	EXP 	polygon_4: autoDraw = False
+89.8141 	EXP 	fiksa: autoDraw = True
+91.8147 	EXP 	fiksa: autoDraw = False
+91.8147 	EXP 	fiksa: autoDraw = False
+91.8147 	EXP 	strza: autoDraw = True
+91.8147 	EXP 	polygon_4: autoDraw = True
+94.7824 	EXP 	polygon_3: autoDraw = True
+97.7832 	EXP 	polygon_3: autoDraw = False
+97.7832 	EXP 	polygon_4: autoDraw = False
+97.8046 	EXP 	New trial (rep=10, index=0): None
+97.8183 	EXP 	strza: autoDraw = False
+97.8183 	EXP 	strza: autoDraw = False
+97.8183 	EXP 	polygon_3: autoDraw = False
+97.8183 	EXP 	polygon_4: autoDraw = False
+97.8183 	EXP 	fiksa: autoDraw = True
+99.8207 	EXP 	fiksa: autoDraw = False
+99.8207 	EXP 	fiksa: autoDraw = False
+99.8207 	EXP 	strza: autoDraw = True
+99.8207 	EXP 	polygon_3: autoDraw = True
+102.8029 	EXP 	polygon_4: autoDraw = True
+105.8034 	EXP 	polygon_3: autoDraw = False
+105.8034 	EXP 	polygon_4: autoDraw = False
+105.8084 	EXP 	New trial (rep=11, index=0): None
+105.8198 	EXP 	strza: autoDraw = False
+105.8198 	EXP 	strza: autoDraw = False
+105.8198 	EXP 	polygon_3: autoDraw = False
+105.8198 	EXP 	polygon_4: autoDraw = False
+105.8198 	EXP 	fiksa: autoDraw = True
+107.8239 	EXP 	fiksa: autoDraw = False
+107.8239 	EXP 	fiksa: autoDraw = False
+107.8239 	EXP 	strza: autoDraw = True
+107.8239 	EXP 	polygon_3: autoDraw = True
+110.7900 	EXP 	polygon_4: autoDraw = True
+113.7900 	EXP 	polygon_3: autoDraw = False
+113.7900 	EXP 	polygon_4: autoDraw = False
+113.8114 	EXP 	New trial (rep=12, index=0): None
+113.8267 	EXP 	strza: autoDraw = False
+113.8267 	EXP 	strza: autoDraw = False
+113.8267 	EXP 	polygon_3: autoDraw = False
+113.8267 	EXP 	polygon_4: autoDraw = False
+113.8267 	EXP 	fiksa: autoDraw = True
+115.8399 	EXP 	fiksa: autoDraw = False
+115.8399 	EXP 	strza: autoDraw = True
+115.8399 	EXP 	polygon_3: autoDraw = True
+118.8241 	EXP 	polygon_4: autoDraw = True
+121.8100 	EXP 	polygon_3: autoDraw = False
+121.8100 	EXP 	polygon_4: autoDraw = False
+121.8305 	EXP 	New trial (rep=13, index=0): None
+121.8446 	EXP 	strza: autoDraw = False
+121.8446 	EXP 	polygon_3: autoDraw = False
+121.8446 	EXP 	polygon_4: autoDraw = False
+121.8446 	EXP 	fiksa: autoDraw = True
+123.8611 	EXP 	fiksa: autoDraw = False
+123.8611 	EXP 	strza: autoDraw = True
+123.8611 	EXP 	polygon_4: autoDraw = True
+126.8268 	EXP 	polygon_3: autoDraw = True
+129.8298 	EXP 	polygon_3: autoDraw = False
+129.8298 	EXP 	polygon_4: autoDraw = False
+129.8462 	EXP 	New trial (rep=14, index=0): None
+129.8657 	EXP 	strza: autoDraw = False
+129.8657 	EXP 	polygon_3: autoDraw = False
+129.8657 	EXP 	polygon_4: autoDraw = False
+129.8657 	EXP 	fiksa: autoDraw = True
+131.8809 	EXP 	fiksa: autoDraw = False
+131.8809 	EXP 	strza: autoDraw = True
+131.8809 	EXP 	polygon_3: autoDraw = True
+134.8468 	EXP 	polygon_4: autoDraw = True
+137.8474 	EXP 	polygon_3: autoDraw = False
+137.8474 	EXP 	polygon_4: autoDraw = False
+137.8494 	EXP 	New trial (rep=15, index=0): None
+137.8640 	EXP 	strza: autoDraw = False
+137.8640 	EXP 	polygon_3: autoDraw = False
+137.8640 	EXP 	polygon_4: autoDraw = False
+137.8640 	EXP 	fiksa: autoDraw = True
+139.8644 	EXP 	fiksa: autoDraw = False
+139.8644 	EXP 	fiksa: autoDraw = False
+139.8644 	EXP 	strza: autoDraw = True
+139.8644 	EXP 	polygon_3: autoDraw = True
+142.8325 	EXP 	polygon_4: autoDraw = True
+145.8335 	EXP 	polygon_3: autoDraw = False
+145.8335 	EXP 	polygon_4: autoDraw = False
+145.8546 	EXP 	New trial (rep=16, index=0): None
+145.8682 	EXP 	strza: autoDraw = False
+145.8682 	EXP 	polygon_3: autoDraw = False
+145.8682 	EXP 	polygon_4: autoDraw = False
+145.8682 	EXP 	fiksa: autoDraw = True
+147.8722 	EXP 	fiksa: autoDraw = False
+147.8722 	EXP 	fiksa: autoDraw = False
+147.8722 	EXP 	strza: autoDraw = True
+147.8722 	EXP 	polygon_4: autoDraw = True
+150.8372 	EXP 	polygon_3: autoDraw = True
+153.8362 	EXP 	polygon_3: autoDraw = False
+153.8362 	EXP 	polygon_4: autoDraw = False
+153.8766 	EXP 	New trial (rep=17, index=0): None
+153.8868 	EXP 	strza: autoDraw = False
+153.8868 	EXP 	polygon_3: autoDraw = False
+153.8868 	EXP 	polygon_4: autoDraw = False
+153.8868 	EXP 	fiksa: autoDraw = True
+155.8880 	EXP 	fiksa: autoDraw = False
+155.8880 	EXP 	fiksa: autoDraw = False
+155.8880 	EXP 	strza: autoDraw = True
+155.8880 	EXP 	polygon_4: autoDraw = True
+158.8544 	EXP 	polygon_3: autoDraw = True
+161.8736 	EXP 	polygon_3: autoDraw = False
+161.8736 	EXP 	polygon_4: autoDraw = False
+161.8767 	EXP 	New trial (rep=18, index=0): None
+161.8918 	EXP 	strza: autoDraw = False
+161.8918 	EXP 	strza: autoDraw = False
+161.8918 	EXP 	polygon_3: autoDraw = False
+161.8918 	EXP 	polygon_4: autoDraw = False
+161.8918 	EXP 	fiksa: autoDraw = True
+163.9064 	EXP 	fiksa: autoDraw = False
+163.9064 	EXP 	strza: autoDraw = True
+163.9064 	EXP 	polygon_3: autoDraw = True
+166.8753 	EXP 	polygon_4: autoDraw = True
+169.8754 	EXP 	polygon_3: autoDraw = False
+169.8754 	EXP 	polygon_4: autoDraw = False
+169.8981 	EXP 	New trial (rep=19, index=0): None
+169.9102 	EXP 	strza: autoDraw = False
+169.9102 	EXP 	polygon_3: autoDraw = False
+169.9102 	EXP 	polygon_4: autoDraw = False
+169.9102 	EXP 	fiksa: autoDraw = True
+171.9117 	EXP 	fiksa: autoDraw = False
+171.9117 	EXP 	fiksa: autoDraw = False
+171.9117 	EXP 	strza: autoDraw = True
+171.9117 	EXP 	polygon_3: autoDraw = True
+174.8939 	EXP 	polygon_4: autoDraw = True
+177.8784 	EXP 	polygon_3: autoDraw = False
+177.8784 	EXP 	polygon_4: autoDraw = False
+177.9009 	EXP 	New trial (rep=20, index=0): None
+177.9133 	EXP 	strza: autoDraw = False
+177.9133 	EXP 	strza: autoDraw = False
+177.9133 	EXP 	polygon_3: autoDraw = False
+177.9133 	EXP 	polygon_4: autoDraw = False
+177.9133 	EXP 	fiksa: autoDraw = True
+179.9161 	EXP 	fiksa: autoDraw = False
+179.9161 	EXP 	fiksa: autoDraw = False
+179.9161 	EXP 	strza: autoDraw = True
+179.9161 	EXP 	polygon_4: autoDraw = True
+182.8797 	EXP 	polygon_3: autoDraw = True
+185.8826 	EXP 	polygon_3: autoDraw = False
+185.8826 	EXP 	polygon_4: autoDraw = False
+185.9222 	EXP 	New trial (rep=21, index=0): None
+185.9313 	EXP 	strza: autoDraw = False
+185.9313 	EXP 	polygon_3: autoDraw = False
+185.9313 	EXP 	polygon_4: autoDraw = False
+185.9313 	EXP 	fiksa: autoDraw = True
+187.9331 	EXP 	fiksa: autoDraw = False
+187.9331 	EXP 	fiksa: autoDraw = False
+187.9331 	EXP 	strza: autoDraw = True
+187.9331 	EXP 	polygon_4: autoDraw = True
+190.9158 	EXP 	polygon_3: autoDraw = True
+193.9017 	EXP 	polygon_3: autoDraw = False
+193.9017 	EXP 	polygon_4: autoDraw = False
+193.9186 	EXP 	New trial (rep=22, index=0): None
+193.9362 	EXP 	strza: autoDraw = False
+193.9362 	EXP 	strza: autoDraw = False
+193.9362 	EXP 	polygon_3: autoDraw = False
+193.9362 	EXP 	polygon_4: autoDraw = False
+193.9362 	EXP 	fiksa: autoDraw = True
+195.9525 	EXP 	fiksa: autoDraw = False
+195.9525 	EXP 	strza: autoDraw = True
+195.9525 	EXP 	polygon_4: autoDraw = True
+198.9354 	EXP 	polygon_3: autoDraw = True
+201.9199 	EXP 	polygon_3: autoDraw = False
+201.9199 	EXP 	polygon_4: autoDraw = False
+201.9219 	EXP 	New trial (rep=23, index=0): None
+201.9390 	EXP 	strza: autoDraw = False
+201.9390 	EXP 	polygon_3: autoDraw = False
+201.9390 	EXP 	polygon_4: autoDraw = False
+201.9390 	EXP 	fiksa: autoDraw = True
+203.9547 	EXP 	fiksa: autoDraw = False
+203.9547 	EXP 	strza: autoDraw = True
+203.9547 	EXP 	polygon_4: autoDraw = True
+206.9227 	EXP 	polygon_3: autoDraw = True
+209.9263 	EXP 	polygon_3: autoDraw = False
+209.9263 	EXP 	polygon_4: autoDraw = False
+209.9284 	EXP 	New trial (rep=24, index=0): None
+209.9394 	EXP 	strza: autoDraw = False
+209.9394 	EXP 	polygon_3: autoDraw = False
+209.9394 	EXP 	polygon_4: autoDraw = False
+209.9394 	EXP 	fiksa: autoDraw = True
+211.9399 	EXP 	fiksa: autoDraw = False
+211.9399 	EXP 	fiksa: autoDraw = False
+211.9399 	EXP 	strza: autoDraw = True
+211.9399 	EXP 	polygon_3: autoDraw = True
+214.9288 	EXP 	polygon_4: autoDraw = True
+217.9255 	EXP 	polygon_3: autoDraw = False
+217.9255 	EXP 	polygon_4: autoDraw = False
+217.9295 	EXP 	New trial (rep=25, index=0): None
+217.9447 	EXP 	strza: autoDraw = False
+217.9447 	EXP 	strza: autoDraw = False
+217.9447 	EXP 	polygon_3: autoDraw = False
+217.9447 	EXP 	polygon_4: autoDraw = False
+217.9447 	EXP 	fiksa: autoDraw = True
+219.9592 	EXP 	fiksa: autoDraw = False
+219.9592 	EXP 	strza: autoDraw = True
+219.9592 	EXP 	polygon_4: autoDraw = True
+222.9307 	EXP 	polygon_3: autoDraw = True
+225.9279 	EXP 	polygon_3: autoDraw = False
+225.9279 	EXP 	polygon_4: autoDraw = False
+225.9516 	EXP 	New trial (rep=26, index=0): None
+225.9629 	EXP 	strza: autoDraw = False
+225.9629 	EXP 	polygon_3: autoDraw = False
+225.9629 	EXP 	polygon_4: autoDraw = False
+225.9629 	EXP 	fiksa: autoDraw = True
+227.9641 	EXP 	fiksa: autoDraw = False
+227.9641 	EXP 	fiksa: autoDraw = False
+227.9641 	EXP 	strza: autoDraw = True
+227.9641 	EXP 	polygon_4: autoDraw = True
+230.9499 	EXP 	polygon_3: autoDraw = True
+233.9477 	EXP 	polygon_3: autoDraw = False
+233.9477 	EXP 	polygon_4: autoDraw = False
+233.9520 	EXP 	New trial (rep=27, index=0): None
+233.9666 	EXP 	strza: autoDraw = False
+233.9666 	EXP 	strza: autoDraw = False
+233.9666 	EXP 	polygon_3: autoDraw = False
+233.9666 	EXP 	polygon_4: autoDraw = False
+233.9666 	EXP 	fiksa: autoDraw = True
+235.9835 	EXP 	fiksa: autoDraw = False
+235.9835 	EXP 	strza: autoDraw = True
+235.9835 	EXP 	polygon_4: autoDraw = True
+238.9707 	EXP 	polygon_3: autoDraw = True
+241.9503 	EXP 	polygon_3: autoDraw = False
+241.9503 	EXP 	polygon_4: autoDraw = False
+241.9762 	EXP 	New trial (rep=28, index=0): None
+241.9862 	EXP 	strza: autoDraw = False
+241.9862 	EXP 	polygon_3: autoDraw = False
+241.9862 	EXP 	polygon_4: autoDraw = False
+241.9862 	EXP 	fiksa: autoDraw = True
+243.9847 	EXP 	fiksa: autoDraw = False
+243.9847 	EXP 	fiksa: autoDraw = False
+243.9847 	EXP 	strza: autoDraw = True
+243.9847 	EXP 	polygon_3: autoDraw = True
+246.9737 	EXP 	polygon_4: autoDraw = True
+249.9560 	EXP 	polygon_3: autoDraw = False
+249.9560 	EXP 	polygon_4: autoDraw = False
+249.9764 	EXP 	New trial (rep=29, index=0): None
+249.9887 	EXP 	strza: autoDraw = False
+249.9887 	EXP 	strza: autoDraw = False
+249.9887 	EXP 	polygon_3: autoDraw = False
+249.9887 	EXP 	polygon_4: autoDraw = False
+249.9887 	EXP 	fiksa: autoDraw = True
+251.9922 	EXP 	fiksa: autoDraw = False
+251.9922 	EXP 	fiksa: autoDraw = False
+251.9922 	EXP 	strza: autoDraw = True
+251.9922 	EXP 	polygon_4: autoDraw = True
+254.9708 	EXP 	polygon_3: autoDraw = True
+257.9723 	EXP 	polygon_3: autoDraw = False
+257.9723 	EXP 	polygon_4: autoDraw = False
+257.9920 	EXP 	New trial (rep=30, index=0): None
+258.0096 	EXP 	strza: autoDraw = False
+258.0096 	EXP 	polygon_3: autoDraw = False
+258.0096 	EXP 	polygon_4: autoDraw = False
+258.0096 	EXP 	fiksa: autoDraw = True
+260.0238 	EXP 	fiksa: autoDraw = False
+260.0238 	EXP 	strza: autoDraw = True
+260.0238 	EXP 	polygon_3: autoDraw = True
+263.0096 	EXP 	polygon_4: autoDraw = True
+266.0084 	EXP 	polygon_3: autoDraw = False
+266.0084 	EXP 	polygon_4: autoDraw = False
+266.0106 	EXP 	New trial (rep=31, index=0): None
+266.0280 	EXP 	strza: autoDraw = False
+266.0280 	EXP 	polygon_3: autoDraw = False
+266.0280 	EXP 	polygon_4: autoDraw = False
+266.0280 	EXP 	fiksa: autoDraw = True
+268.0428 	EXP 	fiksa: autoDraw = False
+268.0428 	EXP 	strza: autoDraw = True
+268.0428 	EXP 	polygon_3: autoDraw = True
+271.0278 	EXP 	polygon_4: autoDraw = True
+274.0292 	EXP 	polygon_3: autoDraw = False
+274.0292 	EXP 	polygon_4: autoDraw = False
+274.0312 	EXP 	New trial (rep=32, index=0): None
+274.0469 	EXP 	strza: autoDraw = False
+274.0469 	EXP 	polygon_3: autoDraw = False
+274.0469 	EXP 	polygon_4: autoDraw = False
+274.0469 	EXP 	fiksa: autoDraw = True
+276.0457 	EXP 	fiksa: autoDraw = False
+276.0457 	EXP 	strza: autoDraw = True
+276.0457 	EXP 	polygon_4: autoDraw = True
+279.0129 	EXP 	polygon_3: autoDraw = True
+282.0157 	EXP 	polygon_3: autoDraw = False
+282.0157 	EXP 	polygon_4: autoDraw = False
+282.0358 	EXP 	New trial (rep=33, index=0): None
+282.0487 	EXP 	strza: autoDraw = False
+282.0487 	EXP 	strza: autoDraw = False
+282.0487 	EXP 	polygon_3: autoDraw = False
+282.0487 	EXP 	polygon_4: autoDraw = False
+282.0487 	EXP 	fiksa: autoDraw = True
+284.0519 	EXP 	fiksa: autoDraw = False
+284.0519 	EXP 	fiksa: autoDraw = False
+284.0519 	EXP 	strza: autoDraw = True
+284.0519 	EXP 	polygon_3: autoDraw = True
+287.0163 	EXP 	polygon_4: autoDraw = True
+290.0180 	EXP 	polygon_3: autoDraw = False
+290.0180 	EXP 	polygon_4: autoDraw = False
+290.0541 	EXP 	New trial (rep=34, index=0): None
+290.0672 	EXP 	strza: autoDraw = False
+290.0672 	EXP 	polygon_3: autoDraw = False
+290.0672 	EXP 	polygon_4: autoDraw = False
+290.0672 	EXP 	fiksa: autoDraw = True
+292.0689 	EXP 	fiksa: autoDraw = False
+292.0689 	EXP 	fiksa: autoDraw = False
+292.0689 	EXP 	strza: autoDraw = True
+292.0689 	EXP 	polygon_3: autoDraw = True
+295.0397 	EXP 	polygon_4: autoDraw = True
+298.0388 	EXP 	polygon_3: autoDraw = False
+298.0388 	EXP 	polygon_4: autoDraw = False
+298.0554 	EXP 	New trial (rep=35, index=0): None
+298.0702 	EXP 	strza: autoDraw = False
+298.0702 	EXP 	strza: autoDraw = False
+298.0702 	EXP 	polygon_3: autoDraw = False
+298.0702 	EXP 	polygon_4: autoDraw = False
+298.0702 	EXP 	fiksa: autoDraw = True
+300.0701 	EXP 	fiksa: autoDraw = False
+300.0701 	EXP 	fiksa: autoDraw = False
+300.0701 	EXP 	strza: autoDraw = True
+300.0701 	EXP 	polygon_3: autoDraw = True
+303.0404 	EXP 	polygon_4: autoDraw = True
+306.0429 	EXP 	polygon_3: autoDraw = False
+306.0429 	EXP 	polygon_4: autoDraw = False
+306.0573 	EXP 	New trial (rep=36, index=0): None
+306.0717 	EXP 	strza: autoDraw = False
+306.0717 	EXP 	strza: autoDraw = False
+306.0717 	EXP 	polygon_3: autoDraw = False
+306.0717 	EXP 	polygon_4: autoDraw = False
+306.0717 	EXP 	fiksa: autoDraw = True
+308.0728 	EXP 	fiksa: autoDraw = False
+308.0728 	EXP 	strza: autoDraw = True
+308.0728 	EXP 	polygon_4: autoDraw = True
+311.0403 	EXP 	polygon_3: autoDraw = True
+314.0413 	EXP 	polygon_3: autoDraw = False
+314.0413 	EXP 	polygon_4: autoDraw = False
+314.0604 	EXP 	New trial (rep=37, index=0): None
+314.0762 	EXP 	strza: autoDraw = False
+314.0762 	EXP 	polygon_3: autoDraw = False
+314.0762 	EXP 	polygon_4: autoDraw = False
+314.0762 	EXP 	fiksa: autoDraw = True
+316.0778 	EXP 	fiksa: autoDraw = False
+316.0778 	EXP 	fiksa: autoDraw = False
+316.0778 	EXP 	strza: autoDraw = True
+316.0778 	EXP 	polygon_4: autoDraw = True
+319.0443 	EXP 	polygon_3: autoDraw = True
+322.0446 	EXP 	polygon_3: autoDraw = False
+322.0446 	EXP 	polygon_4: autoDraw = False
+322.0689 	EXP 	New trial (rep=38, index=0): None
+322.0828 	EXP 	strza: autoDraw = False
+322.0828 	EXP 	strza: autoDraw = False
+322.0828 	EXP 	polygon_3: autoDraw = False
+322.0828 	EXP 	polygon_4: autoDraw = False
+322.0828 	EXP 	fiksa: autoDraw = True
+324.0958 	EXP 	fiksa: autoDraw = False
+324.0958 	EXP 	strza: autoDraw = True
+324.0958 	EXP 	polygon_3: autoDraw = True
+327.0620 	EXP 	polygon_4: autoDraw = True
+330.0634 	EXP 	polygon_3: autoDraw = False
+330.0634 	EXP 	polygon_4: autoDraw = False
+330.0829 	EXP 	New trial (rep=39, index=0): None
+330.0986 	EXP 	strza: autoDraw = False
+330.0986 	EXP 	polygon_3: autoDraw = False
+330.0986 	EXP 	polygon_4: autoDraw = False
+330.0986 	EXP 	fiksa: autoDraw = True
+332.1158 	EXP 	fiksa: autoDraw = False
+332.1158 	EXP 	strza: autoDraw = True
+332.1158 	EXP 	polygon_3: autoDraw = True
+335.1061 	EXP 	polygon_4: autoDraw = True
+338.0829 	EXP 	polygon_3: autoDraw = False
+338.0829 	EXP 	polygon_4: autoDraw = False
+338.1037 	EXP 	New trial (rep=40, index=0): None
+338.1199 	EXP 	strza: autoDraw = False
+338.1199 	EXP 	polygon_3: autoDraw = False
+338.1199 	EXP 	polygon_4: autoDraw = False
+338.1199 	EXP 	fiksa: autoDraw = True
+340.1340 	EXP 	fiksa: autoDraw = False
+340.1340 	EXP 	strza: autoDraw = True
+340.1340 	EXP 	polygon_3: autoDraw = True
+343.1230 	EXP 	polygon_4: autoDraw = True
+346.1244 	EXP 	polygon_3: autoDraw = False
+346.1244 	EXP 	polygon_4: autoDraw = False
+346.1264 	EXP 	New trial (rep=41, index=0): None
+346.1404 	EXP 	strza: autoDraw = False
+346.1404 	EXP 	polygon_3: autoDraw = False
+346.1404 	EXP 	polygon_4: autoDraw = False
+346.1404 	EXP 	fiksa: autoDraw = True
+348.1531 	EXP 	fiksa: autoDraw = False
+348.1531 	EXP 	strza: autoDraw = True
+348.1531 	EXP 	polygon_3: autoDraw = True
+351.1376 	EXP 	polygon_4: autoDraw = True
+354.1219 	EXP 	polygon_3: autoDraw = False
+354.1219 	EXP 	polygon_4: autoDraw = False
+354.1448 	EXP 	New trial (rep=42, index=0): None
+354.1564 	EXP 	strza: autoDraw = False
+354.1564 	EXP 	polygon_3: autoDraw = False
+354.1564 	EXP 	polygon_4: autoDraw = False
+354.1564 	EXP 	fiksa: autoDraw = True
+356.1575 	EXP 	fiksa: autoDraw = False
+356.1575 	EXP 	fiksa: autoDraw = False
+356.1575 	EXP 	strza: autoDraw = True
+356.1575 	EXP 	polygon_4: autoDraw = True
+359.1233 	EXP 	polygon_3: autoDraw = True
+362.1245 	EXP 	polygon_3: autoDraw = False
+362.1245 	EXP 	polygon_4: autoDraw = False
+362.1447 	EXP 	New trial (rep=43, index=0): None
+362.1587 	EXP 	strza: autoDraw = False
+362.1587 	EXP 	strza: autoDraw = False
+362.1587 	EXP 	polygon_3: autoDraw = False
+362.1587 	EXP 	polygon_4: autoDraw = False
+362.1587 	EXP 	fiksa: autoDraw = True
+364.1606 	EXP 	fiksa: autoDraw = False
+364.1606 	EXP 	fiksa: autoDraw = False
+364.1606 	EXP 	strza: autoDraw = True
+364.1606 	EXP 	polygon_3: autoDraw = True
+367.1449 	EXP 	polygon_4: autoDraw = True
+370.1309 	EXP 	polygon_3: autoDraw = False
+370.1309 	EXP 	polygon_4: autoDraw = False
+370.1459 	EXP 	New trial (rep=44, index=0): None
+370.1609 	EXP 	strza: autoDraw = False
+370.1609 	EXP 	strza: autoDraw = False
+370.1609 	EXP 	polygon_3: autoDraw = False
+370.1609 	EXP 	polygon_4: autoDraw = False
+370.1609 	EXP 	fiksa: autoDraw = True
+372.1616 	EXP 	fiksa: autoDraw = False
+372.1616 	EXP 	strza: autoDraw = True
+372.1616 	EXP 	polygon_4: autoDraw = True
+375.1460 	EXP 	polygon_3: autoDraw = True
+378.1300 	EXP 	polygon_3: autoDraw = False
+378.1300 	EXP 	polygon_4: autoDraw = False
+378.1535 	EXP 	New trial (rep=45, index=0): None
+378.1683 	EXP 	strza: autoDraw = False
+378.1683 	EXP 	polygon_3: autoDraw = False
+378.1683 	EXP 	polygon_4: autoDraw = False
+378.1683 	EXP 	fiksa: autoDraw = True
+380.1810 	EXP 	fiksa: autoDraw = False
+380.1810 	EXP 	strza: autoDraw = True
+380.1810 	EXP 	polygon_4: autoDraw = True
+383.1489 	EXP 	polygon_3: autoDraw = True
+386.1521 	EXP 	polygon_3: autoDraw = False
+386.1521 	EXP 	polygon_4: autoDraw = False
+386.1688 	EXP 	New trial (rep=46, index=0): None
+386.1822 	EXP 	strza: autoDraw = False
+386.1822 	EXP 	polygon_3: autoDraw = False
+386.1822 	EXP 	polygon_4: autoDraw = False
+386.1822 	EXP 	fiksa: autoDraw = True
+388.1833 	EXP 	fiksa: autoDraw = False
+388.1833 	EXP 	fiksa: autoDraw = False
+388.1833 	EXP 	strza: autoDraw = True
+388.1833 	EXP 	polygon_3: autoDraw = True
+391.1729 	EXP 	polygon_4: autoDraw = True
+394.1520 	EXP 	polygon_3: autoDraw = False
+394.1520 	EXP 	polygon_4: autoDraw = False
+394.1771 	EXP 	New trial (rep=47, index=0): None
+394.1901 	EXP 	strza: autoDraw = False
+394.1901 	EXP 	polygon_3: autoDraw = False
+394.1901 	EXP 	polygon_4: autoDraw = False
+394.1901 	EXP 	fiksa: autoDraw = True
+396.2025 	EXP 	fiksa: autoDraw = False
+396.2025 	EXP 	strza: autoDraw = True
+396.2025 	EXP 	polygon_4: autoDraw = True
+399.1706 	EXP 	polygon_3: autoDraw = True
+402.1714 	EXP 	polygon_3: autoDraw = False
+402.1714 	EXP 	polygon_4: autoDraw = False
+402.1919 	EXP 	New trial (rep=48, index=0): None
+402.2058 	EXP 	strza: autoDraw = False
+402.2058 	EXP 	polygon_3: autoDraw = False
+402.2058 	EXP 	polygon_4: autoDraw = False
+402.2058 	EXP 	fiksa: autoDraw = True
+404.2079 	EXP 	fiksa: autoDraw = False
+404.2079 	EXP 	fiksa: autoDraw = False
+404.2079 	EXP 	strza: autoDraw = True
+404.2079 	EXP 	polygon_4: autoDraw = True
+407.1733 	EXP 	polygon_3: autoDraw = True
+410.1740 	EXP 	polygon_3: autoDraw = False
+410.1740 	EXP 	polygon_4: autoDraw = False
+410.1956 	EXP 	New trial (rep=49, index=0): None
+410.2093 	EXP 	strza: autoDraw = False
+410.2093 	EXP 	strza: autoDraw = False
+410.2093 	EXP 	polygon_3: autoDraw = False
+410.2093 	EXP 	polygon_4: autoDraw = False
+410.2093 	EXP 	fiksa: autoDraw = True
+412.2087 	EXP 	fiksa: autoDraw = False
+412.2087 	EXP 	fiksa: autoDraw = False
+412.2087 	EXP 	strza: autoDraw = True
+412.2087 	EXP 	polygon_4: autoDraw = True
+415.1759 	EXP 	polygon_3: autoDraw = True
+418.1810 	EXP 	polygon_3: autoDraw = False
+418.1810 	EXP 	polygon_4: autoDraw = False
+418.1990 	EXP 	New trial (rep=50, index=0): None
+418.2140 	EXP 	strza: autoDraw = False
+418.2140 	EXP 	strza: autoDraw = False
+418.2140 	EXP 	polygon_3: autoDraw = False
+418.2140 	EXP 	polygon_4: autoDraw = False
+418.2140 	EXP 	fiksa: autoDraw = True
+420.2312 	EXP 	fiksa: autoDraw = False
+420.2312 	EXP 	strza: autoDraw = True
+420.2312 	EXP 	polygon_4: autoDraw = True
+423.1955 	EXP 	polygon_3: autoDraw = True
+426.1969 	EXP 	polygon_3: autoDraw = False
+426.1969 	EXP 	polygon_4: autoDraw = False
+426.2274 	EXP 	New trial (rep=51, index=0): None
+426.2339 	EXP 	strza: autoDraw = False
+426.2339 	EXP 	polygon_3: autoDraw = False
+426.2339 	EXP 	polygon_4: autoDraw = False
+426.2339 	EXP 	fiksa: autoDraw = True
+428.2489 	EXP 	fiksa: autoDraw = False
+428.2489 	EXP 	strza: autoDraw = True
+428.2489 	EXP 	polygon_4: autoDraw = True
+431.2322 	EXP 	polygon_3: autoDraw = True
+434.2218 	EXP 	polygon_3: autoDraw = False
+434.2218 	EXP 	polygon_4: autoDraw = False
+434.2384 	EXP 	New trial (rep=52, index=0): None
+434.2541 	EXP 	strza: autoDraw = False
+434.2541 	EXP 	polygon_3: autoDraw = False
+434.2541 	EXP 	polygon_4: autoDraw = False
+434.2541 	EXP 	fiksa: autoDraw = True
+436.2668 	EXP 	fiksa: autoDraw = False
+436.2668 	EXP 	strza: autoDraw = True
+436.2668 	EXP 	polygon_4: autoDraw = True
+439.2525 	EXP 	polygon_3: autoDraw = True
+442.2351 	EXP 	polygon_3: autoDraw = False
+442.2351 	EXP 	polygon_4: autoDraw = False
+442.2545 	EXP 	New trial (rep=53, index=0): None
+442.2714 	EXP 	strza: autoDraw = False
+442.2714 	EXP 	polygon_3: autoDraw = False
+442.2714 	EXP 	polygon_4: autoDraw = False
+442.2714 	EXP 	fiksa: autoDraw = True
+444.2860 	EXP 	fiksa: autoDraw = False
+444.2860 	EXP 	strza: autoDraw = True
+444.2860 	EXP 	polygon_3: autoDraw = True
+447.2533 	EXP 	polygon_4: autoDraw = True
+450.2543 	EXP 	polygon_3: autoDraw = False
+450.2543 	EXP 	polygon_4: autoDraw = False
+450.2775 	EXP 	New trial (rep=54, index=0): None
+450.2892 	EXP 	strza: autoDraw = False
+450.2892 	EXP 	polygon_3: autoDraw = False
+450.2892 	EXP 	polygon_4: autoDraw = False
+450.2892 	EXP 	fiksa: autoDraw = True
+452.2898 	EXP 	fiksa: autoDraw = False
+452.2898 	EXP 	fiksa: autoDraw = False
+452.2898 	EXP 	strza: autoDraw = True
+452.2898 	EXP 	polygon_3: autoDraw = True
+455.2561 	EXP 	polygon_4: autoDraw = True
+458.2585 	EXP 	polygon_3: autoDraw = False
+458.2585 	EXP 	polygon_4: autoDraw = False
+458.2820 	EXP 	New trial (rep=55, index=0): None
+458.2944 	EXP 	strza: autoDraw = False
+458.2944 	EXP 	polygon_3: autoDraw = False
+458.2944 	EXP 	polygon_4: autoDraw = False
+458.2944 	EXP 	fiksa: autoDraw = True
+460.3098 	EXP 	fiksa: autoDraw = False
+460.3098 	EXP 	strza: autoDraw = True
+460.3098 	EXP 	polygon_4: autoDraw = True
+463.2757 	EXP 	polygon_3: autoDraw = True
+466.2782 	EXP 	polygon_3: autoDraw = False
+466.2782 	EXP 	polygon_4: autoDraw = False
+466.2982 	EXP 	New trial (rep=56, index=0): None
+466.3131 	EXP 	strza: autoDraw = False
+466.3131 	EXP 	polygon_3: autoDraw = False
+466.3131 	EXP 	polygon_4: autoDraw = False
+466.3131 	EXP 	fiksa: autoDraw = True
+468.3292 	EXP 	fiksa: autoDraw = False
+468.3292 	EXP 	strza: autoDraw = True
+468.3292 	EXP 	polygon_3: autoDraw = True
+471.3161 	EXP 	polygon_4: autoDraw = True
+474.3130 	EXP 	polygon_3: autoDraw = False
+474.3130 	EXP 	polygon_4: autoDraw = False
+474.3153 	EXP 	New trial (rep=57, index=0): None
+474.3298 	EXP 	strza: autoDraw = False
+474.3298 	EXP 	polygon_3: autoDraw = False
+474.3298 	EXP 	polygon_4: autoDraw = False
+474.3298 	EXP 	fiksa: autoDraw = True
+476.3320 	EXP 	fiksa: autoDraw = False
+476.3320 	EXP 	fiksa: autoDraw = False
+476.3320 	EXP 	strza: autoDraw = True
+476.3320 	EXP 	polygon_3: autoDraw = True
+479.3143 	EXP 	polygon_4: autoDraw = True
+482.2986 	EXP 	polygon_3: autoDraw = False
+482.2986 	EXP 	polygon_4: autoDraw = False
+482.3196 	EXP 	New trial (rep=58, index=0): None
+482.3357 	EXP 	strza: autoDraw = False
+482.3357 	EXP 	strza: autoDraw = False
+482.3357 	EXP 	polygon_3: autoDraw = False
+482.3357 	EXP 	polygon_4: autoDraw = False
+482.3357 	EXP 	fiksa: autoDraw = True
+484.3501 	EXP 	fiksa: autoDraw = False
+484.3501 	EXP 	strza: autoDraw = True
+484.3501 	EXP 	polygon_4: autoDraw = True
+487.3357 	EXP 	polygon_3: autoDraw = True
+490.3178 	EXP 	polygon_3: autoDraw = False
+490.3178 	EXP 	polygon_4: autoDraw = False
+490.3369 	EXP 	New trial (rep=59, index=0): None
+490.3523 	EXP 	strza: autoDraw = False
+490.3523 	EXP 	polygon_3: autoDraw = False
+490.3523 	EXP 	polygon_4: autoDraw = False
+490.3523 	EXP 	fiksa: autoDraw = True
+492.3539 	EXP 	fiksa: autoDraw = False
+492.3539 	EXP 	strza: autoDraw = True
+492.3539 	EXP 	polygon_4: autoDraw = True
+495.3208 	EXP 	polygon_3: autoDraw = True
+498.3373 	EXP 	polygon_3: autoDraw = False
+498.3373 	EXP 	polygon_4: autoDraw = False
+498.3550 	EXP 	strza: autoDraw = False
+498.3550 	EXP 	polygon_3: autoDraw = False
+498.3550 	EXP 	polygon_4: autoDraw = False
+498.3550 	EXP 	text_3: autoDraw = True
+501.3570 	EXP 	text_3: autoDraw = False
+501.3768 	EXP 	window1: mouseVisible = True
