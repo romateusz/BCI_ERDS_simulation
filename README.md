@@ -34,7 +34,7 @@ Celem projektu jest rozróżnienie ruchu palca wskazującego lewego od prawego, 
 
 ### "Krok po kroku", czyli co tak naprawdę zostało wykonane
 
-1. Przygotowano procedurę w środowisku `Psychopy`, podczas której wyświetlane zostały kolejno pomieszane polecenia o wykonaniu ruchu lewym lub prawym palcem. W celu zminimalizowania efektu odpowiedzi mózgu na pojawiający się bodziec na ekranie, wprowadzono subtelną zmianę, którą polegała na wyświetleniu krzyża fiksacyjnego (caly czas), a w momentach rządania akcji badanego dodawano na jednym z końców ramienia grot, zwrócony w odpowiednim kierunku. Jedna realizacja trwała 8 sekund i składała się kolejno: z 2 sekundowego czasu referencyjnego, 3 sekundowego czasu rządania ruchu/wyobrażenia tego ruchu przez badanego oraz 3 sekundowego czasu pojawienia się samego krzyża jak to miało miejsce podczas pierwszych dwóch sekund.
+1. Przygotowano procedurę w środowisku `Psychopy`, podczas której wyświetlane zostały kolejno pomieszane polecenia o wykonaniu ruchu lewym lub prawym palcem. W celu zminimalizowania efektu odpowiedzi mózgu na pojawiający się bodziec na ekranie, wprowadzono subtelną zmianę, która polegała na wyświetleniu krzyża fiksacyjnego (cały czas), a w momentach rządania akcjiprzez badanego dodawano na jednym z końców ramienia grot, zwrócony w odpowiednim kierunku. Jedna realizacja trwała 8 sekund i składała się kolejno: z 2 sekundowego czasu referencyjnego, 3 sekundowego czasu rządania ruchu/wyobrażenia tego ruchu przez badanego oraz 3 sekundowego czasu pojawienia się samego krzyża jak to miało miejsce podczas pierwszych dwóch sekund.
 
 2. Stworzone oprogramowanie wczytuje, przetwarza i zapisuje do plików pocięte dane EEG właśnie z tego eksperymentu, który możnaby dosyć łatwo zastosować potem w zbudowaniu Interfesju Mózg-Komputer opartego na przetwarzaniu danych w czasie rzeczywistym.
 
@@ -46,21 +46,21 @@ Celem projektu jest rozróżnienie ruchu palca wskazującego lewego od prawego, 
    - Spektrogramy (jak poprzednio), ale normalizowane średnią z referencyjnego fragmentu sygnału (baselinem),
    - Spektrogramy (jak poprzednio), ale normalizowane Z-score normalizacja względem baseline’u (średnia i std liczone po próbach).
 
-Na usyzkanych spektrogramach można zauważyć:
+Na uzyskanych spektrogramach można zauważyć:
 
-  - najbardziej interesujące zmiany będą obserwowane nad korą ruchową, czyli elektrody w linii C, nastomiast z racji na przesunięcie czepka, ewidentnie widać, że największe różnice zaobserwowane zostały w linii P,
+  - Najbardziej interesujące zmiany powinny zostać zaobserwowane nad korą ruchową, czyli na elektro\ach w linii C, nastomiast z racji na zaistniałe przesunięcie czepka, ewidentnie widać, że największe różnice zaobserwowane zostały w linii P,
   
-  - W szczególności możnaby się spodziewać, że najbardziej w różnicowania ruchu lewego palca od prawego, posłużą w tym przypadku elektordy P3 i P4. Natomiast w późniejszej fazie projektu okazało się, że w przypadku zebranych (przy tym projekcie) danych największe różnice są obserwowane przez CSP na elektrodzie P4,
+  - W szczególności możnaby się spodziewać, że najbardziej w rozróżnieniu ruchu lewego palca od prawego, posłużą w tym przypadku elektordy P3 i P4. Natomiast w późniejszej fazie projektu okazało się, że w przypadku zebranych danych największe różnice są obserwowane przez CSP na elektrodzie P4,
   
   - Zaobserwowano znaczące zmiany amplitudy w paśmie alfa (~10 Hz), szczególnie tuż po pojawieniu się bodźca świadczącego o kierunku, co może wskazywać na zaangażowanie uwagi oraz przetwarzanie informacji sensorycznej, co zmusiło badanego do podjęcia reakcji. Bezpośrednio po tej fazie aktywnego przetwarzania zauważalny jest ponowny wzrost amplitudy w zakresie alfa – tzw. alpha rebound, który może odzwierciedlać zakończenie aktywnego przetwarzania oraz powrót do stanu spoczynkowego lub mechanizmów hamowania korowego.
 
   - Dodatkowo, obserwowane są zmiany amplitudy również w paśmie beta, co może wiązać się z procesami motorycznymi lub poznawczymi towarzyszącymi reakcjom na bodziec.
 
-5. Następnie przetworzone dane EEG (w dziedzinie czasu), dzieli się na dwa zbiory: treningowy i testowy (w celu zasymulowania prawdziwego BCI, gdzie część danych posłużyłaby do kalibracji oprogramowania, a cześć zostałaby użyta już po kalibracji, symulując niejako dane wczytywane na żywo w Interfejsie Mózg-Komputer). Treningową część danych poddaje się metodzie Common Spatial Patterns (CSP), w celu wyodrębnienia cech z kory ruchowej, umożliwiającej znalezienie przestrzennych wzorców związanych z aktywacją kory ruchowej. Na podstawie wektora własnego macierzy `W` i wartości własnych `Lambda` obliczonych za pomocą CSP, wybierana jest interaktywnie przez użytkownika, reprezentacja dwóch najlepiej różnicujących dwa zbiory danych komponentów.
+5. Następnie przetworzone dane EEG (w dziedzinie czasu), podzielone zostały na dwa zbiory: treningowy i testowy (w celu zasymulowania prawdziwego BCI, gdzie część danych posłużyłaby do kalibracji oprogramowania, a cześć zostałaby użyta już po kalibracji, symulując niejako dane wczytywane na żywo w Interfejsie Mózg-Komputer). Treningową część danych poddaje się metodzie Common Spatial Patterns (CSP), w celu wyodrębnienia cech z kory ruchowej, umożliwiającej znalezienie przestrzennych wzorców związanych z aktywacją kory ruchowej. Na podstawie wektora własnego macierzy `W` i wartości własnych `Lambda` obliczonych za pomocą CSP, wybierana jest interaktywnie przez użytkownika, reprezentacja dwóch najlepiej różnicujących dwa zbiory danych komponentów.
 
-6. Dane trenigowe jak i testowe tranformowano za pomocą uzyskanej macierzy W (tylko na danych treningowych, w celu uniknięcia pewnych przecieków informacji). Następnie dane, będące niejako wytłumaczeniem źródeł, a nie sygnałami zarejestrowanymi z elektrod, przetworzono na spektogramy i wytrenowano dwa modele: Regresji Logistycznej i XGBOOST.
+6. Dane trenigowe jak i testowe tranformowano za pomocą uzyskanej macierzy `W` (tylko na danych treningowych, w celu uniknięcia przecieków informacji). Następnie dane, będące niejako wytłumaczeniem źródeł, a nie sygnałami zarejestrowanymi z elektrod, przetworzono na spektogramy i wytrenowano dwa modele: Regresji Logistycznej i XGBOOST.
 
-7. Uzyskane modele poddano weryfikacji  jakości uzyskanego modelu za pomocą danych testowych. Dla ruchu uzyskane metryki określające jakość wytrenowanego modelu oscylowały w okolicach 75%, natomiast w przypadku wyobrażeń  wynik bardzo zależał od wylosowanego zbioru treningowego i testowego. Aby poprawność wskazań modelu wzrosła, należałoby zwiększyć ilość danych treningowych/kalibracyjnych. Należałoby również pomyśleć nad zwiększeniem czasu, gdzie badany trenowałby oraz być może wybrać silniejszy/łatwiejszy do wyobrażenia dla badanego ruch. Nie mniej jednak palce to dobry pomysł, gdyż duże obszary kory odpowiadają za ruchy palców i dłoni (jest to ściśle związane z ich niezwykłą precyzją i czułością).
+7. Uzyskane modele poddano weryfikacji  jakości uzyskanego modelu za pomocą danych testowych. Dla ruchu uzyskane metryki określające jakość wytrenowanego modelu oscylowały w okolicach 75%, natomiast w przypadku wyobrażeń  wynik bardzo zależał od wylosowanego zbioru treningowego i testowego. Aby poprawność wskazań modelu wzrosła, należałoby zwiększyć ilość danych treningowych/kalibracyjnych. Należałoby również pomyśleć nad zwiększeniem czasu, gdzie badany trenowałby oraz być może wybrać silniejszy/łatwiejszy do wyobrażenia dla badanego ruch. Niemniej jednak wybór palców to dobry pomysł, gdyż duże obszary kory odpowiadają właśnie za ruchy palców i dłoni (jest to ściśle związane z ich niezwykłą precyzją i czułością).
 
 ### Przykładowe metryki dla ruchu:
 
@@ -86,8 +86,8 @@ weighted avg       0.76      0.75      0.75        12
 
 ## Architektura
 
-1. **Główna funkcja uruchamiająca różne moduły**
-2. **ERDS_readData.ipynb** – Zbieranie danych EEG
+1. **ERDS_readData.ipynb** – Zbieranie i przetwarzanie danych EEG
+2. **ERDS_main.py** - Główny moduł uruchamiający różne komponenty: wstępnej analizy, podziału danych dopasowywania macierzy W i trenowania modeli.
 3. **ERDS_utils.py** – Moduł z rysowaniem obrazków i funkcjami pomocniczymi
 4. **ERDS_CSP.py** – Moduł odpowiedzialny za obliczenie macierzy przejścia `W` oraz wartości własnych `Lambda` za pomocą danych treningowych, wybór dominujących wektorów własnych, Transformacje sygnału EEG treningowego i testowego macierzą `W`.
 5. **ERDS_training.py** – Klasyfikacja ruchu i tylko jego zamiaru w oparciu o przekształcone cechy za pomocą CSP.
@@ -113,7 +113,7 @@ pip install -r requirements.txt
 
 ### 1. Część wczytania i obróbki danych
 
-Należy wykonać notebook w środowisku Jupyter: `ERDS_readData.py`, po wykonaniu notebooka zapisane zostaną dane:
+Przed analizą własnych danych należy wykonać notebook w środowisku Jupyter: `ERDS_readData.py`, po całkowitym wykonaniu notebooka zostaną zapisane dane:
 
 - mati_ruch_dane.npy
 - mati_wyobrazenie_dane.npy
