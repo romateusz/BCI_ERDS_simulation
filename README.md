@@ -14,8 +14,11 @@
   - [Wymagania](#wymagania)
   - [Instalacja](#instalacja)
   - [Uruchomienie oprogramowania](#uruchomienie-oprogramowania)
-    - [Wybór danych EEG](#wybór-danych-eeg)
-    - [Wybór kanałów](#wybór-kanałów)
+    - [1. Część wczytania i obróbki danych](#1-część-wczytania-i-obróbki-danych)
+    - [2. Część Analizy i Treningu](#2-część-analizy-i-treningu)
+      - [Wybór danych EEG](#wybór-danych-eeg)
+      - [Wybór komponentów](#wybór-komponentów)
+      - [Wynik](#wynik)
 
 ## Opis
 
@@ -75,27 +78,27 @@ pip install -r requirements.txt
 
 ## Uruchomienie oprogramowania
 
-1. Część wczytania i obróbki danych
+### 1. Część wczytania i obróbki danych
    
    Należy wykonać notebook w środowisku Jupyter: `ERDS_readData.py`, po wykonaniu notebooka zapisane zostaną dane:
    - mati_ruch_dane.npy
    - mati_wyobrazenie_dane.npy
 
 
-2. Część Analizy i Treningu
+### 2. Część Analizy i Treningu
 
 ```bash
 python3 ERDS_main.py 
 ```
 
-### Wybór danych EEG
+#### Wybór danych EEG
 
 Wybierz rodziaj danych wpisując: R lub W (Ruch/Wyobrażenie):
 ```bash
  R
  ```
 
-### Wybór kanałów
+#### Wybór komponentów
 
 Wybierz właściwy pierwszy komponent na podstawie rysunków (powinien zawierać aktywność na P3-P4):
 ```bash
@@ -107,4 +110,5 @@ Wybierz właściwy drugi komponent na podstawie rysunków:
 0
 ```
 
+#### Wynik
 Na wyjściu zostają przedstawione raporty uzyskanych klasyfikacji badanego problemu rozrożnienia ruchu/wyobrażenia lewego od prawego palca wskazującego.
