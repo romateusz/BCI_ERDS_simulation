@@ -5,6 +5,7 @@
 - [BCI\_ERDS\_simulation](#bci_erds_simulation)
   - [Spis treści](#spis-treści)
   - [Opis](#opis)
+    - [Przykład dla ruchu:](#przykład-dla-ruchu)
   - [Architektura](#architektura)
   - [Wymagania](#wymagania)
   - [Instalacja](#instalacja)
@@ -22,12 +23,17 @@ Projekt ten służy do wykrywania zamiaru poruszenia lewego palca lub prawego pa
 Dane zostały podzielone na zbiór treningowy i testowy (w celu zasymulowania prawdziwego BCI, gdzie częśc danych byłaby kalibracyjna, a cześć zostałaby użyta już po kalibracji). W celu wykonania klasyfikacji użyto Regresji Logistycznej i metody XGBOOST.
 Dla ruchu uzyskane metryki określające jakość wytrenowanego modelu oscylowały w okolicach 75%, natomiast w przypadku wyobrażeń była duża losowość i wynik bardzo zależał od wylosowanego zbioru treningowego i testowego, ale poprawność modelu dla problemu rozróżnienia wyobrażonego ruchu można ocenić na 66%.
 
-*Przykład dla ruchu:*
-Confusion Matrix:
- [[5 1]
+### Przykład dla ruchu:
+
+**Confusion Matrix:**
+```
+[[5 1]
  [2 4]]
-Classification Report:
-               precision    recall  f1-score   support
+```
+
+**Classification Report:**
+```
+              precision    recall  f1-score   support
 
            0       0.71      0.83      0.77         6
            1       0.80      0.67      0.73         6
@@ -35,6 +41,8 @@ Classification Report:
     accuracy                           0.75        12
    macro avg       0.76      0.75      0.75        12
 weighted avg       0.76      0.75      0.75        12
+```
+
 
 ## Architektura
 1. **Główna funkcja uruchamiająca różne moduły**
