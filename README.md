@@ -1,29 +1,35 @@
 # BCI_ERDS_simulation
 
+## Autor
+👤 **Mateusz Roman**
+
 ## Spis treści
 
 - [BCI\_ERDS\_simulation](#bci_erds_simulation)
+  - [Autor](#autor)
   - [Spis treści](#spis-treści)
   - [Opis](#opis)
-    - [Przykład dla ruchu:](#przykład-dla-ruchu)
+    - [Przykładowe metryki dla ruchu:](#przykładowe-metryki-dla-ruchu)
   - [Architektura](#architektura)
   - [Wymagania](#wymagania)
   - [Instalacja](#instalacja)
-  - [Uruchomienie](#uruchomienie)
-    - [wybór kanałów np.:](#wybór-kanałów-np)
+  - [Uruchomienie oprogramowania](#uruchomienie-oprogramowania)
+    - [Wybór danych EEG](#wybór-danych-eeg)
+    - [Wybór kanałów](#wybór-kanałów)
 
 ## Opis
 
-System przetwarza dane EEG w celu klasyfikacji prawdziwego ruchi i zamiaru poruszenia palca wskazującego:
+System przetwarza dane EEG w celu klasyfikacji prawdziwego ruchu i zamiaru poruszenia palca wskazującego:
 - lewego,
 - prawego.
 
-Projekt ten służy do wykrywania zamiaru poruszenia lewego palca lub prawego palca wskazującego na podstawie sygnałów EEG. Analiza opiera się na przetworzeniu sygnału na spektrogramy, w celu jakościowej oceny sygnałów, a następnie wykorzystano metodę Common Spatial Patterns (CSP) w celu wyodrębnienia cech z kory ruchowej.  umożliwiającej znalezienie przestrzennych wzorców związanych z aktywacją kory ruchowej. Na podstawie wektora własnego macierzy W i wartości własnych Lambda oblicoznych za pomocą CSP, wybierana jest reprezentacja najlepiej różnicująca klasy ruchu.
+Oprogramowanie to służy do wykrywania zamiaru, jak i faktycznego poruszenia lewego palca lub prawego palca wskazującego na podstawie sygnału EEG. Analiza opiera się na przetworzeniu sygnału na spektrogramy, w celu jakościowej oceny wczytanych sygnałów, a następnie wykorzystano metodę Common Spatial Patterns (CSP) w celu wyodrębnienia cech z kory ruchowej.  umożliwiającej znalezienie przestrzennych wzorców związanych z aktywacją kory ruchowej. Na podstawie wektora własnego macierzy `W` i wartości własnych `Lambda` obliczonych za pomocą CSP, wybierana jest reprezentacja najlepiej różnicująca klasy ruchu.
 
-Dane zostały podzielone na zbiór treningowy i testowy (w celu zasymulowania prawdziwego BCI, gdzie częśc danych byłaby kalibracyjna, a cześć zostałaby użyta już po kalibracji). W celu wykonania klasyfikacji użyto Regresji Logistycznej i metody XGBOOST.
-Dla ruchu uzyskane metryki określające jakość wytrenowanego modelu oscylowały w okolicach 75%, natomiast w przypadku wyobrażeń była duża losowość i wynik bardzo zależał od wylosowanego zbioru treningowego i testowego, ale poprawność modelu dla problemu rozróżnienia wyobrażonego ruchu można ocenić na 66%.
+Dane zostały podzielone na zbiór treningowy i testowy (w celu zasymulowania prawdziwego BCI, gdzie częśc danych stałaby się kalibracyjna, a cześć zostałaby użyta już po kalibracji, symulując nie jako użycie na żywo). W celu wykonania klasyfikacji użyto Regresji Logistycznej i metody XGBOOST.
 
-### Przykład dla ruchu:
+Dla ruchu uzyskane metryki określające jakość wytrenowanego modelu oscylowały w okolicach 75%, natomiast w przypadku wyobrażeń  wynik bardzo zależał od wylosowanego zbioru treningowego i testowego, ale poprawność wskazań modelu wzrosła, należałoby zwiększyć ilość danych treningowych/kalibracyjnych, lepiej wytrenować badanego i być może wybrać silniejszy/łatwiejszy do wyobrażenia dla badanego ruch.
+
+### Przykładowe metryki dla ruchu:
 
 **Confusion Matrix:**
 ```
@@ -42,7 +48,6 @@ Dla ruchu uzyskane metryki określające jakość wytrenowanego modelu oscylowa�
    macro avg       0.76      0.75      0.75        12
 weighted avg       0.76      0.75      0.75        12
 ```
-
 
 ## Architektura
 1. **Główna funkcja uruchamiająca różne moduły**
@@ -68,12 +73,29 @@ pip install -r requirements.txt
 
 ```
 
-## Uruchomienie 
+## Uruchomienie oprogramowania
+
+1. Część wczytania i obróbki danych
+   
+   Należy wykonać notebook w środowisku Jupyter: `ERDS_readData.py`, po wykonaniu notebooka zapisane zostaną dane:
+   - mati_ruch_dane.npy
+   - mati_wyobrazenie_dane.npy
+
+
+2. Część Analizy i Treningu
+
 ```bash
 python3 ERDS_main.py 
 ```
 
-### wybór kanałów np.:
+### Wybór danych EEG
+
+Wybierz rodziaj danych wpisując: R lub W (Ruch/Wyobrażenie):
+```bash
+ R
+ ```
+
+### Wybór kanałów
 
 Wybierz właściwy pierwszy komponent na podstawie rysunków (powinien zawierać aktywność na P3-P4):
 ```bash
@@ -84,3 +106,5 @@ Wybierz właściwy drugi komponent na podstawie rysunków:
 ```bash
 0
 ```
+
+Na wyjściu zostają przedstawione raporty uzyskanych klasyfikacji badanego problemu rozrożnienia ruchu/wyobrażenia lewego od prawego palca wskazującego.
