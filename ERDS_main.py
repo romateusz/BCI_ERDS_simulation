@@ -66,8 +66,7 @@ ERDS_utils.rysunek_glowy(usr_SWP_norm, t, f, "Uśredniony Spektogram WyobPrawa n
 # ERDS_utils.rysunek_glowy(SWL_norm_sigm, t, f, "Uśredniony Spektrogram WyobLewa normowany sigma", sigma=3)
 # ERDS_utils.rysunek_glowy(SWP_norm_sigm, t, f, "Uśredniony Spektrogram WyobPrawa normowany sigma", sigma=3)
 
-
-X_train, X_test, y_train, y_test = ERDS_training.podziel_dane_do_uczenia(daneWyobLewa, daneWyobPrawa)
+X_train, X_test, y_train, y_test = ERDS_training.podziel_dane_do_uczenia(daneRuchLewa, daneRuchPrawa)
 X_train_lewa = X_train[y_train == 0]
 X_train_prawa = X_train[y_train == 1]
 
