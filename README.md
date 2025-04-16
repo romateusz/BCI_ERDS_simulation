@@ -27,12 +27,10 @@
 
 ### Streszczenie
 
-Celem projektu jest rozróżnienie faktycznego ruchu palca wskazującego:
+Celem projektu jest rozróżnienie ruchu palca wskazującego lewego od prawego, na podstawie sygnału EEG. Wykorzystano w tym celu dane zebrane doświadczanie z:
 
-- lewego,
-- prawego,
-  
-jak i na podstawie ruchu wyobrażonego, korzystając z zebranego doświadczanie sygnału EEG.
+- ruchu faktycznego,
+- jak i ruchu wyobrażonego.
 
 ### "Krok po kroku", czyli co tak naprawdę zostało wykonane
 
