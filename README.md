@@ -32,15 +32,15 @@ Celem projektu jest rozróżnienie faktycznego ruchu palca wskazującego:
 - lewego,
 - prawego,
   
-jak i na podstawie ruchu wyobrażonego na korzystając z zebranego sygnału EEG.
+jak i na podstawie ruchu wyobrażonego, korzystając z zebranego doświadczanie sygnału EEG.
 
 ### "Krok po kroku", czyli co tak naprawdę zostało wykonane
 
-1. -> Etap zbierania danych <-
+1. Przygotowano procedurę w środowisku `Psychopy`, podczas której wyświetlane zostały kolejno pomieszane polecenia o wykonaniu ruchu lewym lub prawym palcem. W celu zminimalizowania efektu odpowiedzi mózgu na pojawiający się bodziec na ekranie, wprowadzono subtelną zmianę, którą polegała na wyświetleniu krzyża fiksacyjnego (caly czas), a w momentach rządania akcji badanego dodawano na jednym z końców ramienia grot, zwrócony w odpowiednim kierunku. Jedna realizacja trwała 8 sekund i składała się kolejno: z 2 sekundowego czasu referencyjnego, 3 sekundowego czasu rządania ruchu/wyobrażenia tego ruchu przez badanego oraz 3 sekundowego czasu pojawienia się samego krzyża jak to miało miejsce podczas pierwszych dwóch sekund.
 
-2. Oprogramowanie to wczytuje, przetwarza i zapisuje do plików pocięte dane EEG.
+2. Stworzone oprogramowanie wczytuje, przetwarza i zapisuje do plików pocięte dane EEG właśnie z tego eksperymentu, który możnaby dosyć łatwo zastosować potem w zbudowaniu Interfesju Mózg-Komputer opartego na przetwarzaniu danych w czasie rzeczywistym.
 
-3. Następnie umożliwia ich wstępną analizę, która opiera się na spektrogramach stworzonych z wczytanego sygnału EEG. Umożliwia to jakościową ocenę wczytanych sygnałów.
+3. Oprogramowanie to umożliwia wstępną analizę wczytanych danych, która opiera się na spektrogramach stworzonych z wczytanego sygnału EEG. Umożliwia to jakościową ocenę wczytanych sygnałów.
 
 4. Wszelkie rysunki podczas działania programu są zapisywane w katalogu `./ERDS_output`. Między innymi trafiają tam obrazki przedstawiające spektrogramy, rozmieszczone w układzie odpowiadającym lokalizacji elektrod. Spektogramy można doskalować według potrzeby parametrem sigma, który dostosowuje zakres dolny i górny kolorów dla wartości przedstawionych na ilustracjach. Podczas działania programu są generowane trzy typy spektrogramów:
 
