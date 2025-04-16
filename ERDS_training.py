@@ -1,8 +1,6 @@
 import numpy as np
-from sklearn.linear_model import LinearRegression, LogisticRegression
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split, GridSearchCV
 import xgboost as xgb
 

@@ -1,8 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-import pandas as pd
-import scipy as sc
 import scipy.signal as signal
 
 def oblicz_usredniony_spektrogram(dane, fs=256, nperseg=128, noverlap=64):
