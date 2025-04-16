@@ -30,16 +30,19 @@
 Celem projektu jest rozróżnienie faktycznego ruchu palca wskazującego:
 
 - lewego,
-- prawego
-jak i ruchu wyobrażonego na podstawie sygnału EEG.
+- prawego,
+  
+jak i na podstawie ruchu wyobrażonego na korzystając z zebranego sygnału EEG.
 
 ### "Krok po kroku", czyli co tak naprawdę zostało wykonane
 
-1. Oprogramowanie to wczytuje, przetwarza i zapisuje do plików pocięte dane EEG.
+1. -> Etap zbierania danych <-
 
-2. Następnie umożliwia ich wstępną analizę, która opiera się na spektrogramach stworzonych z wczytanego sygnału EEG. Umożliwia to jakościową ocenę wczytanych sygnałów.
+2. Oprogramowanie to wczytuje, przetwarza i zapisuje do plików pocięte dane EEG.
 
-3. Wszelkie rysunki podczas działania programu są zapisywane w katalogu `./ERDS_output`. Między innymi trafiają tam obrazki przedstawiające spektrogramy, rozmieszczone w układzie odpowiadającym lokalizacji elektrod. Spektogramy można doskalować według potrzeby parametrem sigma, który dostosowuje zakres dolny i górny kolorów dla wartości przedstawionych na ilustracjach. Podczas działania programu są generowane trzy typy spektrogramów:
+3. Następnie umożliwia ich wstępną analizę, która opiera się na spektrogramach stworzonych z wczytanego sygnału EEG. Umożliwia to jakościową ocenę wczytanych sygnałów.
+
+4. Wszelkie rysunki podczas działania programu są zapisywane w katalogu `./ERDS_output`. Między innymi trafiają tam obrazki przedstawiające spektrogramy, rozmieszczone w układzie odpowiadającym lokalizacji elektrod. Spektogramy można doskalować według potrzeby parametrem sigma, który dostosowuje zakres dolny i górny kolorów dla wartości przedstawionych na ilustracjach. Podczas działania programu są generowane trzy typy spektrogramów:
 
    - Spektrogramy przedstawiające w swoich pikselach, po prostu amplitudę sygnału w dziedzinie czas-częstość,
    - Spektrogramy (jak poprzednio), ale normalizowane średnią z referencyjnego fragmentu sygnału (baselinem),
@@ -47,19 +50,19 @@ jak i ruchu wyobrażonego na podstawie sygnału EEG.
 
 Na usyzkanych spektrogramach można zauważyć:
 
-- najbardziej interesujące zmiany będą obserwowane nad korą ruchową, czyli elektrody w linii C, nastomiast z racji na przesunięcie czepka, ewidentnie widać, że największe różnice zaobserwowane zostały w linii P,
+  - najbardziej interesujące zmiany będą obserwowane nad korą ruchową, czyli elektrody w linii C, nastomiast z racji na przesunięcie czepka, ewidentnie widać, że największe różnice zaobserwowane zostały w linii P,
   
-- W szczególności możnaby się spodziewać, że najbardziej w różnicowania ruchu lewego palca od prawego, posłużą w tym przypadku elektordy P3 i P4. Natomiast w późniejszej fazie projektu okazało się, że w przypadku zebranych (przy tym projekcie) danych największe różnice są obserwowane przez CSP na elektrodzie P4,
+  - W szczególności możnaby się spodziewać, że najbardziej w różnicowania ruchu lewego palca od prawego, posłużą w tym przypadku elektordy P3 i P4. Natomiast w późniejszej fazie projektu okazało się, że w przypadku zebranych (przy tym projekcie) danych największe różnice są obserwowane przez CSP na elektrodzie P4,
   
-- Zaobserwowano znaczące zmiany amplitudy w paśmie alfa (~10 Hz), szczególnie tuż po pojawieniu się bodźca świadczącego o kierunku, co może wskazywać na zaangażowanie uwagi oraz przetwarzanie informacji sensorycznej, co zmusiło badanego do podjęcia reakcji. Bezpośrednio po tej fazie aktywnego przetwarzania zauważalny jest ponowny wzrost amplitudy w zakresie alfa – tzw. alpha rebound, który może odzwierciedlać zakończenie aktywnego przetwarzania oraz powrót do stanu spoczynkowego lub mechanizmów hamowania korowego.
+  - Zaobserwowano znaczące zmiany amplitudy w paśmie alfa (~10 Hz), szczególnie tuż po pojawieniu się bodźca świadczącego o kierunku, co może wskazywać na zaangażowanie uwagi oraz przetwarzanie informacji sensorycznej, co zmusiło badanego do podjęcia reakcji. Bezpośrednio po tej fazie aktywnego przetwarzania zauważalny jest ponowny wzrost amplitudy w zakresie alfa – tzw. alpha rebound, który może odzwierciedlać zakończenie aktywnego przetwarzania oraz powrót do stanu spoczynkowego lub mechanizmów hamowania korowego.
 
-- Dodatkowo, obserwowane są zmiany amplitudy również w paśmie beta, co może wiązać się z procesami motorycznymi lub poznawczymi towarzyszącymi reakcjom na bodziec.
+  - Dodatkowo, obserwowane są zmiany amplitudy również w paśmie beta, co może wiązać się z procesami motorycznymi lub poznawczymi towarzyszącymi reakcjom na bodziec.
 
-1. Następnie przetworzone dane EEG (w dziedzinie czasu), dzieli się na dwa zbiory: treningowy i testowy (w celu zasymulowania prawdziwego BCI, gdzie część danych posłużyłaby do kalibracji oprogramowania, a cześć zostałaby użyta już po kalibracji, symulując niejako dane wczytywane na żywo w Interfejsie Mózg-Komputer). Treningową część danych poddaje się metodzie Common Spatial Patterns (CSP), w celu wyodrębnienia cech z kory ruchowej, umożliwiającej znalezienie przestrzennych wzorców związanych z aktywacją kory ruchowej. Na podstawie wektora własnego macierzy `W` i wartości własnych `Lambda` obliczonych za pomocą CSP, wybierana jest interaktywnie przez użytkownika, reprezentacja dwóch najlepiej różnicujących dwa zbiory danych komponentów.
+5. Następnie przetworzone dane EEG (w dziedzinie czasu), dzieli się na dwa zbiory: treningowy i testowy (w celu zasymulowania prawdziwego BCI, gdzie część danych posłużyłaby do kalibracji oprogramowania, a cześć zostałaby użyta już po kalibracji, symulując niejako dane wczytywane na żywo w Interfejsie Mózg-Komputer). Treningową część danych poddaje się metodzie Common Spatial Patterns (CSP), w celu wyodrębnienia cech z kory ruchowej, umożliwiającej znalezienie przestrzennych wzorców związanych z aktywacją kory ruchowej. Na podstawie wektora własnego macierzy `W` i wartości własnych `Lambda` obliczonych za pomocą CSP, wybierana jest interaktywnie przez użytkownika, reprezentacja dwóch najlepiej różnicujących dwa zbiory danych komponentów.
 
-2. Dane trenigowe jak i testowe tranformowano za pomocą uzyskanej macierzy W (tylko na danych treningowych, w celu uniknięcia pewnych przecieków informacji). Następnie dane, będące niejako wytłumaczeniem źródeł, a nie sygnałami zarejestrowanymi z elektrod, przetworzono na spektogramy i wytrenowano dwa modele: Regresji Logistycznej i XGBOOST.
+6. Dane trenigowe jak i testowe tranformowano za pomocą uzyskanej macierzy W (tylko na danych treningowych, w celu uniknięcia pewnych przecieków informacji). Następnie dane, będące niejako wytłumaczeniem źródeł, a nie sygnałami zarejestrowanymi z elektrod, przetworzono na spektogramy i wytrenowano dwa modele: Regresji Logistycznej i XGBOOST.
 
-3. Uzyskane modele poddano weryfikacji  jakości uzyskanego modelu za pomocą danych testowych. Dla ruchu uzyskane metryki określające jakość wytrenowanego modelu oscylowały w okolicach 75%, natomiast w przypadku wyobrażeń  wynik bardzo zależał od wylosowanego zbioru treningowego i testowego. Aby poprawność wskazań modelu wzrosła, należałoby zwiększyć ilość danych treningowych/kalibracyjnych. Należałoby również pomyśleć nad zwiększeniem czasu, gdzie badany trenowałby oraz być może wybrać silniejszy/łatwiejszy do wyobrażenia dla badanego ruch. Nie mniej jednak palce to dobry pomysł, gdyż duże obszary kory odpowiadają za ruchy palców i dłoni (jest to ściśle związane z ich niezwykłą precyzją i czułością).
+7. Uzyskane modele poddano weryfikacji  jakości uzyskanego modelu za pomocą danych testowych. Dla ruchu uzyskane metryki określające jakość wytrenowanego modelu oscylowały w okolicach 75%, natomiast w przypadku wyobrażeń  wynik bardzo zależał od wylosowanego zbioru treningowego i testowego. Aby poprawność wskazań modelu wzrosła, należałoby zwiększyć ilość danych treningowych/kalibracyjnych. Należałoby również pomyśleć nad zwiększeniem czasu, gdzie badany trenowałby oraz być może wybrać silniejszy/łatwiejszy do wyobrażenia dla badanego ruch. Nie mniej jednak palce to dobry pomysł, gdyż duże obszary kory odpowiadają za ruchy palców i dłoni (jest to ściśle związane z ich niezwykłą precyzją i czułością).
 
 ### Przykładowe metryki dla ruchu:
 
