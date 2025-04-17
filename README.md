@@ -30,13 +30,13 @@
 Celem projektu jest rozróżnienie ruchu palca wskazującego lewego od prawego, na podstawie sygnału EEG. Wykorzystano w tym celu dane zebrane doświadczanie z:
 
 - ruchu faktycznego,
-- jak i ruchu wyobrażonego.
+- ruchu wyobrażonego.
 
 ### "Krok po kroku", czyli co tak naprawdę zostało wykonane
 
-1. Przygotowano procedurę w środowisku `Psychopy`, podczas której wyświetlane zostały kolejno pomieszane polecenia o wykonaniu ruchu lewym lub prawym palcem. W celu zminimalizowania efektu odpowiedzi mózgu na pojawiający się bodziec na ekranie, wprowadzono subtelną zmianę, która polegała na wyświetleniu krzyża fiksacyjnego (cały czas), a w momentach rządania akcjiprzez badanego dodawano na jednym z końców ramienia grot, zwrócony w odpowiednim kierunku. Jedna realizacja trwała 8 sekund i składała się kolejno: z 2 sekundowego czasu referencyjnego, 3 sekundowego czasu rządania ruchu/wyobrażenia tego ruchu przez badanego oraz 3 sekundowego czasu pojawienia się samego krzyża jak to miało miejsce podczas pierwszych dwóch sekund.
+1. Przygotowano procedurę w środowisku `PsychoPy`, podczas której wyświetlane zostały kolejno pomieszane polecenia o wykonaniu ruchu lewym lub prawym palcem. W celu zminimalizowania efektu odpowiedzi mózgu na pojawiający się bodziec na ekranie, wprowadzono subtelną zmianę, która polegała na wyświetleniu krzyża fiksacyjnego (cały czas), a w momentach rządania akcji przez badanego dodawano na jednym z końców ramienia grot, zwrócony w odpowiednim kierunku. Jedna realizacja trwała 8 sekund i składała się kolejno: z 2-sekundowego czasu referencyjnego, 3-sekundowego czasu żądania wykonania lub wyobrażenia sobie ruchu przez badanego, oraz końcowych 3 sekund przeznaczonych na powrót do stanu wyjściowego — w tym czasie ponownie wyświetlany był krzyż, tak jak podczas pierwszych dwóch sekund.
 
-2. Stworzone oprogramowanie wczytuje, przetwarza i zapisuje do plików pocięte dane EEG właśnie z tego eksperymentu, który możnaby dosyć łatwo zastosować potem w zbudowaniu Interfesju Mózg-Komputer opartego na przetwarzaniu danych w czasie rzeczywistym.
+2. Stworzone oprogramowanie wczytuje, przetwarza i zapisuje dane EEG z eksperymentu w formie gotowej do dalszego wykorzystania, na przykład przy projektowaniu interfejsu mózg–komputer pracującego w czasie rzeczywistym.
 
 3. Oprogramowanie to umożliwia wstępną analizę wczytanych danych, która opiera się na spektrogramach stworzonych z wczytanego sygnału EEG. Umożliwia to jakościową ocenę wczytanych sygnałów.
 
@@ -46,9 +46,9 @@ Celem projektu jest rozróżnienie ruchu palca wskazującego lewego od prawego, 
    - Spektrogramy (jak poprzednio), ale normalizowane średnią z referencyjnego fragmentu sygnału (baselinem),
    - Spektrogramy (jak poprzednio), ale normalizowane Z-score normalizacja względem baseline’u (średnia i std liczone po próbach).
 
-Na uzyskanych spektrogramach można zauważyć:
+W oparciu o uzyskane spektrogramy można zauważyć istotne zmiany w aktywności EEG, które obejmują:
 
-  - Najbardziej interesujące zmiany powinny zostać zaobserwowane nad korą ruchową, czyli na elektro\ach w linii C, nastomiast z racji na zaistniałe przesunięcie czepka, ewidentnie widać, że największe różnice zaobserwowane zostały w linii P,
+  - Najbardziej interesujące zmiany powinny zostać zaobserwowane na korze ruchowej, czyli na elektrodach w linii C, nastomiast z racji na zaistniałe przesunięcie czepka, ewidentnie widać, że największe różnice zaobserwowane zostały w linii P,
   
   - W szczególności możnaby się spodziewać, że najbardziej w rozróżnieniu ruchu lewego palca od prawego, posłużą w tym przypadku elektordy P3 i P4. Natomiast w późniejszej fazie projektu okazało się, że w przypadku zebranych danych największe różnice są obserwowane przez CSP na elektrodzie P4,
   
@@ -88,7 +88,7 @@ weighted avg       0.76      0.75      0.75        12
 
 1. **ERDS_readData.ipynb** – Zbieranie i przetwarzanie danych EEG
 2. **ERDS_main.py** - Główny moduł uruchamiający różne komponenty: wstępnej analizy, podziału danych dopasowywania macierzy W i trenowania modeli.
-3. **ERDS_utils.py** – Moduł z rysowaniem obrazków i funkcjami pomocniczymi
+3. **ERDS_utils.py** – Moduł z funkcjami pomocniczymi i rysowaniem obrazków
 4. **ERDS_CSP.py** – Moduł odpowiedzialny za obliczenie macierzy przejścia `W` oraz wartości własnych `Lambda` za pomocą danych treningowych, wybór dominujących wektorów własnych, Transformacje sygnału EEG treningowego i testowego macierzą `W`.
 5. **ERDS_training.py** – Klasyfikacja ruchu i tylko jego zamiaru w oparciu o przekształcone cechy za pomocą CSP.
 
@@ -148,4 +148,4 @@ Wybierz właściwy drugi komponent na podstawie rysunków:
 
 #### Wynik
 
-Na wyjściu zostają przedstawione raporty uzyskanych klasyfikacji badanego problemu rozrożnienia ruchu/wyobrażenia lewego od prawego palca wskazującego.
+Na wyjściu w konsoli generowane są raporty dotyczące wyników klasyfikacji problemu rozróżnienia ruchu i wyobrażenia ruchu lewego oraz prawego palca wskazującego, a także zapisane obrazy związane z wczytanymi danymi, które podlegały klasyfikacji, dostępne w katalogu: ./ERDS_output.
