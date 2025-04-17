@@ -148,4 +148,4 @@ Wybierz właściwy drugi komponent na podstawie rysunków:
 
 #### Wynik
 
-Na wyjściu w konsoli generowane są raporty dotyczące wyników klasyfikacji problemu rozróżnienia ruchu i wyobrażenia ruchu lewego oraz prawego palca wskazującego, a także zapisane obrazy związane z wczytanymi danymi, które podlegały klasyfikacji, dostępne w katalogu: ./ERDS_output.
+Na wyjściu w konsoli generowane są raporty dotyczące wyników klasyfikacji problemu rozróżnienia ruchu i wyobrażenia ruchu lewego oraz prawego palca wskazującego, a także zapisane obrazy związane z wczytanymi danymi, które podlegały klasyfikacji, dostępne w katalogu: `./ERDS_output`.
